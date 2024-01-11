@@ -1,5 +1,8 @@
 package com.ldtteam.buildserverteleporters;
 
+import com.ldtteam.buildserverteleporters.capability.TeleporterStorageCapabilityProvider;
+import com.ldtteam.buildserverteleporters.constants.Constants;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -21,6 +24,6 @@ public class FMLEventHandler
     @SubscribeEvent
     public static void onAttachingCapabilitiesWorld(@NotNull final AttachCapabilitiesEvent<Level> event)
     {
-        //event.addCapability(new ResourceLocation(Constants.MOD_ID, "teleporterstorage"), new TeleporterStorageCapabilityProvider());
+        event.addCapability(new ResourceLocation(Constants.MOD_ID, "teleporterstorage"), new TeleporterStorageCapabilityProvider());
     }
 }
