@@ -1,0 +1,13 @@
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven {
+        url = 'https://maven.parchmentmc.org'
+    }
+}
+
+dependencies {
+    implementation(fg.deobf("com.ldtteam:blockui:${project.blockUI_version}")) {
+        transitive = false
+    }
+}
